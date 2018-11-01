@@ -1,0 +1,10 @@
+{
+  "name": "www-cryodynrobotics",
+  "version": "1.0.0",
+  "description": "CryodynRobotics corporate website",
+  "main": "index.js",
+  "repository": "https://github.com/lavoieaj/www-cryodynrobotics",
+  "author": "Alex Lavoie",
+  "license": "MIT",
+  "private": false
+}
