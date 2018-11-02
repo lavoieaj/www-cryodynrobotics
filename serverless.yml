@@ -15,7 +15,25 @@ service: www-cryodynrobotics
 
 # You can pin your service to only deploy with a specific Serverless version
 # Check out our docs for more details
-# frameworkVersion: "=X.X.X"
+frameworkVersion: "=1.32.0"
+
+plugins:
+  - fullstack-serverless
+
+custom:
+  fullstack:
+    domain:
+      - cryodynrobotics.com
+      - www.cryodynrobotics.com
+#     certificate: TODO - extract this out as env variable
+    bucketName: webapp
+    distributionFolder: client/dist
+    indexDocument: index.html
+    errorDocument: error.html
+    singlePageApp: true
+    apiPath: api
+#     clientCommand: gulp dist
+#     clientSrcPath: client
 
 provider:
   name: aws
@@ -24,7 +42,7 @@ provider:
 # you can overwrite defaults here
 #  stage: dev
 #  region: us-east-1
-memorySize: 128
+  memorySize: 128
 
 # you can add statements to the Lambda function's IAM Role here
 #  iamRoleStatements:
